@@ -1,0 +1,205 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    color: #fff;
+    animation: gradientBackground 15s ease infinite;
+}
+
+/* Animated Gradient for Body */
+@keyframes gradientBackground {
+    0% {
+        background: linear-gradient(45deg, #ff6a00, #ee0979);
+    }
+    25% {
+        background: linear-gradient(45deg, #ff0077, #3a7bd5);
+    }
+    50% {
+        background: linear-gradient(45deg, #00b09b, #96c93d);
+    }
+    75% {
+        background: linear-gradient(45deg, #f0c27b, #4b1248);
+    }
+    100% {
+        background: linear-gradient(45deg, #ff6a00, #ee0979);
+    }
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    background-size: 400% 400%;
+    animation: navbarGradient 15s ease infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: none;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes navbarGradient {
+    0% {
+        background: linear-gradient(45deg, #ff6a00, #ee0979);
+    }
+    25% {
+        background: linear-gradient(45deg, #ff0077, #3a7bd5);
+    }
+    50% {
+        background: linear-gradient(45deg, #00b09b, #96c93d);
+    }
+    75% {
+        background: linear-gradient(45deg, #f0c27b, #4b1248);
+    }
+    100% {
+        background: linear-gradient(45deg, #ff6a00, #ee0979);
+    }
+}
+
+/* Navbar Title */
+.navbar-title {
+    flex-grow: 1;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+/* Navbar Links */
+.navbar-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-link {
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+}
+
+.navbar-link:hover {
+    background-color: #ff4081;
+    transform: scale(1.1);
+}
+
+/* Hero section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10vw;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcIiNk61ejzN_sz8P9TJh6i1wJb1eb3UGNVQ&s') center center/cover no-repeat; /* Background Image */
+    background-attachment: fixed; /* Ensures the background stays fixed */
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content {
+    max-width: 600px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Adds shadow to text for better visibility */
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: bold;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    animation: fadeInUp 2s ease-out;
+}
+
+.search-bar {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.search-input {
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+}
+
+.search-input input {
+    padding: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff4081;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff80ab;
+    transform: scale(1.05);
+}
+
+/* Social media buttons */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.social-button {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 2rem;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.social-button:hover {
+    background-color: #ff4081;
+    color: #fff;
+    transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 0 5vw;
+    }
+    .hero-title {
+        font-size: 3rem;
+    }
+    .hero-description {
+        font-size: 1rem;
+    }
+}
+
